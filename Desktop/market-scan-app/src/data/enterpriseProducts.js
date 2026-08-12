@@ -1,0 +1,225 @@
+export const PRODUCT_CATEGORIES = [
+  { id: 'neurosymbolic-ai', name: 'Neurosymbolic AI & Knowledge Graphs', icon: 'Brain' },
+  { id: 'api-management', name: 'API Management & Integration', icon: 'Network' },
+  { id: 'iam-security', name: 'Identity & Access Management (IAM)', icon: 'ShieldCheck' },
+  { id: 'aml-fraud', name: 'AML, Fraud & Regulatory Analytics', icon: 'FileSearch' },
+  { id: 'data-analytics', name: 'Enterprise Cloud Data & Warehousing', icon: 'Database' },
+  { id: 'ai-llm', name: 'Enterprise AI & LLM Orchestration', icon: 'Cpu' },
+  { id: 'gen-ai-security', name: 'Gen AI Security & Governance', icon: 'ShieldCheck' },
+  { id: 'core-banking', name: 'Core Banking & Payment Engines', icon: 'Landmark' },
+  { id: 'devops-sec', name: 'Cloud Security & Secrets Management', icon: 'Lock' },
+  { id: 'crm-erp', name: 'Enterprise Financial CRM & Workflow', icon: 'Building2' }
+];
+
+export const DB_ADOPTION_TIERS = {
+  approved: {
+    id: 'approved',
+    label: 'Approved Strategic Standard',
+    badgeClass: 'badge-approved',
+    icon: 'CheckCircle2',
+    color: '#10B981',
+    bg: 'rgba(16, 185, 129, 0.15)',
+    border: '#059669',
+      description: 'Fully vetted by Apollo-1 market review. Cleared for Tier-1 mission-critical production.'
+  },
+  conditional: {
+    id: 'conditional',
+    label: 'Conditional / Sandbox Only',
+    badgeClass: 'badge-conditional',
+    icon: 'AlertTriangle',
+    color: '#F59E0B',
+    bg: 'rgba(245, 158, 11, 0.15)',
+    border: '#D97706',
+      description: 'Allowed in sandbox evaluations with explicit market governance controls.'
+  },
+  sunset: {
+    id: 'sunset',
+    label: 'Deprecated / Phase-Out',
+    badgeClass: 'badge-sunset',
+    icon: 'Clock',
+    color: '#EF4444',
+    bg: 'rgba(239, 68, 68, 0.15)',
+    border: '#DC2626',
+    description: 'Active legacy migration underway. New implementations strictly blocked; scheduled for decommissioning.'
+  },
+  prohibited: {
+    id: 'prohibited',
+    label: 'Prohibited / License Risk',
+    badgeClass: 'badge-prohibited',
+    icon: 'XCircle',
+    color: '#8B5CF6',
+    bg: 'rgba(139, 92, 246, 0.15)',
+    border: '#7C3AED',
+      description: 'Fails market security baseline or violates open-source legal policy (e.g. AGPL/SSPL).'
+  }
+};
+
+export const INITIAL_PRODUCTS = [
+  // Neurosymbolic AI Category
+  {
+    id: 'prod-apollo-1-aui',
+    name: 'Apollo-1 Neurosymbolic Engine',
+    vendor: 'AUI (Advanced User Intelligence)',
+    category: 'neurosymbolic-ai',
+    description: 'Next-generation neurosymbolic AI framework combining deep neural perception with formal symbolic logic for zero-hallucination market adoption and explainable reasoning.',
+    marketShare: '42%',
+    pricingModel: 'Enterprise Core Subscription & License',
+    dbAdoptionStatus: 'approved',
+    dbAdoptionLabel: 'Approved Strategic Neurosymbolic Standard',
+    compliance: { dora: true, bafin: true, gdpr: true, soc2: true, iso27001: true },
+    deployment: ['Private Cloud', 'AWS VPC', 'GCP Sovereign Cloud', 'On-Premises Air-gapped'],
+    licenseType: 'Commercial Enterprise',
+    governanceScores: { security: 98, compliance: 99, operationalRisk: 96, integrationEffort: 92, costEfficiency: 88 },
+    vendorRisk: 'Low',
+    pros: [
+      'Zero LLM hallucination rate via deterministic first-order formal logic verification',
+      'Native market readiness for operational resilience and explainability frameworks',
+      'FIPS 140-3 HSM encryption key wrapping and complete on-prem air-gapped deployment support'
+    ],
+    cons: ['Requires initial schema mapping for legacy SQL databases'],
+    dbArchitectureNotes: 'Designated primary neurosymbolic AI platform for Apollo-1 market adoption and explainable decision automation.',
+    webSourceUrl: 'https://aui.ai/apollo-1'
+  },
+  {
+    id: 'prod-ibm-neurosymbolic',
+    name: 'IBM Neuro-Symbolic AI Toolkit',
+    vendor: 'IBM Research',
+    category: 'neurosymbolic-ai',
+    description: 'Enterprise hybrid AI toolkit integrating Logic Tensor Networks (LTN) with knowledge graphs for explainable reasoning and risk-aware automation.',
+    marketShare: '28%',
+    pricingModel: 'Annual Enterprise Subscription',
+    dbAdoptionStatus: 'approved',
+    dbAdoptionLabel: 'Approved for Research & Quant Risk',
+    compliance: { dora: true, bafin: true, gdpr: true, soc2: true, iso27001: true },
+    deployment: ['On-Premises Air-gapped', 'AWS VPC'],
+    licenseType: 'Commercial Enterprise',
+    governanceScores: { security: 94, compliance: 95, operationalRisk: 91, integrationEffort: 85, costEfficiency: 80 },
+    vendorRisk: 'Low',
+    pros: ['Strong integration with IBM Cloud Pak for Data', 'Proven formal logic proofs'],
+    cons: ['Higher training latency for large knowledge graphs'],
+    dbArchitectureNotes: 'Secondary neurosymbolic platform for explainable quantitative modeling.',
+    webSourceUrl: 'https://www.ibm.com/ai/neuro-symbolic'
+  },
+  {
+    id: 'prod-relational-ai',
+    name: 'RelationalAI Knowledge Engine',
+    vendor: 'RelationalAI Inc.',
+    category: 'neurosymbolic-ai',
+    description: 'Relational Knowledge Graph coprocessor combining graph analytics, business logic rules, and neural embedding search.',
+    marketShare: '18%',
+    pricingModel: 'Credit Consumption Based',
+    dbAdoptionStatus: 'conditional',
+    dbAdoptionLabel: 'Conditional Sandbox Evaluation',
+    compliance: { dora: true, bafin: false, gdpr: true, soc2: true, iso27001: true },
+    deployment: ['AWS VPC', 'GCP Sovereign Cloud'],
+    licenseType: 'Commercial Enterprise',
+    governanceScores: { security: 88, compliance: 86, operationalRisk: 84, integrationEffort: 88, costEfficiency: 82 },
+    vendorRisk: 'Medium',
+    pros: ['Native Snowflake & Databricks integration', 'Expressive Rel logic language'],
+    cons: ['Pending full regulatory audit sign-off'],
+    dbArchitectureNotes: 'Evaluated for sandbox knowledge graph analytics.',
+    webSourceUrl: 'https://relational.ai'
+  },
+  {
+    id: 'prod-lakera-genai-security',
+    name: 'Lakera GenAI Security Platform',
+    vendor: 'Lakera Labs',
+    category: 'gen-ai-security',
+    description: 'Gen AI security platform for runtime prompt inspection, model governance, and enterprise AI threat protection across regulated environments.',
+    marketShare: '14%',
+    pricingModel: 'Enterprise Security Subscription',
+    dbAdoptionStatus: 'approved',
+    dbAdoptionLabel: 'Approved Gen AI Security Standard',
+    compliance: { dora: true, bafin: true, gdpr: true, soc2: true, iso27001: true },
+    deployment: ['Private Cloud', 'AWS VPC', 'GCP Sovereign Cloud'],
+    licenseType: 'Commercial Enterprise',
+    governanceScores: { security: 95, compliance: 96, operationalRisk: 89, integrationEffort: 86, costEfficiency: 78 },
+    vendorRisk: 'Low',
+    pros: ['Specialized in generative AI model risk and prompt governance', 'Integrated runtime defense against model hallucination and data leakage', 'Designed for regulated financial and enterprise AI programs'],
+    cons: ['Requires dedicated model governance policy configuration'],
+    dbArchitectureNotes: 'Primary Gen AI security platform for Apollo-1 AI governance and compliance assurance.',
+    webSourceUrl: 'https://lakera.ai'
+  },
+
+  // API Management
+  {
+    id: 'prod-kong-mesh',
+    name: 'Kong Enterprise Gateway & Mesh',
+    vendor: 'Kong Inc.',
+    category: 'api-management',
+    description: 'High-performance cloud-native API gateway built on NGINX with declarative mesh management and enterprise plugins.',
+    marketShare: '28%',
+    pricingModel: 'Tiered Enterprise Core Subscription',
+    dbAdoptionStatus: 'approved',
+    dbAdoptionLabel: 'Tier-1 Approved Strategic Gateway',
+    compliance: { dora: true, bafin: true, gdpr: true, soc2: true, iso27001: true },
+    deployment: ['Private Cloud', 'AWS VPC', 'GCP Sovereign Cloud', 'On-Premises Air-gapped'],
+    licenseType: 'Commercial Enterprise',
+    governanceScores: { security: 94, compliance: 96, operationalRisk: 90, integrationEffort: 88, costEfficiency: 85 },
+    vendorRisk: 'Low',
+    pros: ['Ultra-low latency (<2ms overhead)', 'Native Kubernetes integration', 'FIPS 140-2 HSM cryptographic module support'],
+    cons: ['Requires specialized Lua script custom plugin knowledge'],
+    dbArchitectureNotes: 'Designated primary API Gateway for secure cloud microservices architecture.'
+  },
+  {
+    id: 'prod-apigee-x',
+    name: 'Google Apigee X',
+    vendor: 'Google Cloud Platform',
+    category: 'api-management',
+    description: 'Full lifecycle API management platform with advanced AI-driven threat protection and developer portal.',
+    marketShare: '32%',
+    pricingModel: 'Pay-as-you-go + Annual License',
+    dbAdoptionStatus: 'approved',
+    dbAdoptionLabel: 'Approved for GCP Sovereign Cloud',
+    compliance: { dora: true, bafin: true, gdpr: true, soc2: true, iso27001: true },
+    deployment: ['GCP Sovereign Cloud', 'AWS VPC'],
+    licenseType: 'Commercial Enterprise',
+    governanceScores: { security: 92, compliance: 94, operationalRisk: 88, integrationEffort: 85, costEfficiency: 78 },
+    vendorRisk: 'Low',
+    pros: ['Built-in Cloud Armor DDoS mitigation', 'Seamless GCP IAM federation', 'Comprehensive Open Banking PSD2 templates'],
+    cons: ['Higher cost tier for high-volume API transaction bursts'],
+    dbArchitectureNotes: 'Standard API proxy framework for regulated financial services deployments on GCP EU infrastructure.'
+  },
+
+  // IAM Security
+  {
+    id: 'prod-okta-workforce',
+    name: 'Okta Enterprise Identity Cloud',
+    vendor: 'Okta Inc.',
+    category: 'iam-security',
+    description: 'Cloud identity and access management suite featuring Zero Trust SSO, adaptive MFA, and lifecycle management.',
+    marketShare: '35%',
+    pricingModel: 'Per User / Per Month',
+    dbAdoptionStatus: 'approved',
+    dbAdoptionLabel: 'Approved Corporate SSO Standard',
+    compliance: { dora: true, bafin: true, gdpr: true, soc2: true, iso27001: true },
+    deployment: ['AWS VPC', 'GCP Sovereign Cloud'],
+    licenseType: 'Commercial Enterprise',
+    governanceScores: { security: 95, compliance: 98, operationalRisk: 92, integrationEffort: 92, costEfficiency: 84 },
+    vendorRisk: 'Low',
+    pros: ['FIPS 140-3 Level 2 authentication endpoints', 'Out-of-the-box SAML/OIDC integrations with 7,000+ apps', 'Strict EU data residency tenant isolation'],
+    cons: ['Requires strict tenant configuration auditing post-breach disclosures'],
+    dbArchitectureNotes: 'Primary workforce identity provider for global regulated deployments.'
+  },
+
+  // AML & Fraud
+  {
+    id: 'prod-nice-actimize',
+    name: 'NICE Actimize Anti-Money Laundering',
+    vendor: 'NICE Ltd.',
+    category: 'aml-fraud',
+    description: 'Industry standard financial crime compliance platform delivering transaction monitoring, sanction screening, and KYC.',
+    marketShare: '40%',
+    pricingModel: 'Custom Enterprise License',
+    dbAdoptionStatus: 'approved',
+    dbAdoptionLabel: 'Approved Strategic Global AML Engine',
+    compliance: { dora: true, bafin: true, gdpr: true, soc2: true, iso27001: true },
+    deployment: ['On-Premises Air-gapped', 'AWS VPC'],
+    licenseType: 'Commercial Enterprise',
+    governanceScores: { security: 96, compliance: 99, operationalRisk: 94, integrationEffort: 75, costEfficiency: 70 },
+    vendorRisk: 'Low',
+    pros: ['Full BaFin & US Fed regulatory acceptance', 'Proven scale over 50M daily SWIFT transactions', 'Pre-packaged SAR (Suspicious Activity Report) workflows'],
+    cons: ['Heavy batch processing latency on older rule engines'],
+    dbArchitectureNotes: 'Core AML and sanctions screening platform for global transaction monitoring.'
+  }
+];
